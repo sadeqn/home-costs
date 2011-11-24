@@ -1,0 +1,17 @@
+This is a tiny tool to record your costs to understand what happen to your money and Why it vanish ;-)
+
+It will be simple and so light to be good to use with GPRS 
+
+
+Notes
+  * You have define cost category directly in Database
+  * It display current time in Jalali
+Install
+  * Copy config/vars-sample.php into config/vars.php 
+  * Create a new database and import structor using install/db.sql
+  * Edit config/vars.php 
+  * It is that! use it, report bug, make patch and tell us your suggestion. 
+ToDo
+  * Add auth method
+  * Admin interface to add category
+  * Add reports (Monthly and weeklu costs, Costs by category in specified period, ...) 
