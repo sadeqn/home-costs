@@ -1,6 +1,8 @@
 <?php
 /**
 * Convert date to Jalali Date String
+* 
+* Note: You need install and enable intl extension. (that seems not work in Windows yet)
 **/
 function toJalali ($date)
 {

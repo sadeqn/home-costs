@@ -8,10 +8,10 @@ Notes
   * It display current time in Jalali
 Install
   * Copy config/vars-sample.php into config/vars.php 
-  * Create a new database and import structor using install/db.sql
+  * Create a new database and import structure using install/db.sql
   * Edit config/vars.php 
   * It is that! use it, report bug, make patch and tell us your suggestion. 
 ToDo
   * Add auth method
   * Admin interface to add category
-  * Add reports (Monthly and weeklu costs, Costs by category in specified period, ...) 
+  * Add reports (Monthly and weekly costs, Costs by category in specified period, ...) 
