@@ -29,6 +29,8 @@ CREATE TABLE `category` (
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+
+insert `category` (`name`) values ("عمومی"),("خوراک"),("حمل و نقل"),("درمان");
 --
 -- Table structure for table `cost`
 --
