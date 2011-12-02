@@ -26,7 +26,7 @@ CREATE TABLE `category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(25) COLLATE utf8_persian_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
@@ -47,7 +47,7 @@ CREATE TABLE `cost` (
   PRIMARY KEY (`id`),
   KEY `idx_category` (`category`),
   KEY `idx_when` (`when`)
-) ENGINE=MyISAM AUTO_INCREMENT=85 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) AUTO_INCREMENT=85 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -79,7 +79,6 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8 */;
 /*!50001 SET collation_connection      = utf8_persian_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`sadeqn`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `vcategorycost` AS select `category`.`id` AS `id`,`category`.`name` AS `name`,ifnull(sum(`cost`.`amount`),0) AS `amount`,count(0) AS `count` from (`category` left join `cost` on((`category`.`id` = `cost`.`category`))) group by `category`.`id` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
