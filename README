@@ -13,6 +13,7 @@ Install
   * Create a new database and import structure using install/db.sql
   * Edit config/vars.php 
   * It is that! use it, report bug, make patch and tell us your suggestion. 
+  * Default user is admin with nimda password (just md5 of passwords stored in user table)
 ToDo
   * Add auth method
   * Admin interface to add category
