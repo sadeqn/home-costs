@@ -85,3 +85,23 @@ function getCostList ($categoryID='')
 	}
 	return $res;
 }
+
+function checkUserPassword($user,$password)
+{
+	global $dbUserName,$dbPassword,$dbName;
+	$md5password=md5($password);
+	$user=mb_strtolower($user);
+
+	$mysqli = new mysqli("localhost", "$dbUserName","$dbPassword", "$dbName");
+	$mysqli->query("set names utf8 collate utf8_persian_ci");
+	$user=$mysqli->real_escape_string($user);
+	$resultSet = $mysqli->query("SELECT * FROM user where `Username`='$user' and `Password`='$md5password'");
+	if (isset($resultSet))
+	{
+		return $resultSet->fetch_object();
+	}
+	else
+	{
+		return false;
+	}
+}

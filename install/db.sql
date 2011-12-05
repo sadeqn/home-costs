@@ -66,6 +66,37 @@ SET character_set_client = utf8;
 ) ENGINE=MyISAM */;
 SET character_set_client = @saved_cs_client;
 
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(60) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
+  `Enable` int(11) NOT NULL,
+  `Username` varchar(25) NOT NULL,
+  `Password` char(32) CHARACTER SET ascii NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='کاربران سیستم';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (10,'مدیر',1,'admin','ee10c315eba2c75b403ea99136f5b48d'); /* the password is "nimda" */;
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+
+UNLOCK TABLES;
+
+
+
 --
 -- Final view structure for view `vcategorycost`
 --
