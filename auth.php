@@ -31,4 +31,5 @@ You need to login before use Home Costs system
 }
 
 // It is ok to use system
-include 'main.php';
+define ("AUTHCOMPLETE",true);
+
